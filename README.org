@@ -2,7 +2,7 @@
 #+date: <2021-05-28 Fr>
 #+author: Christian Egli
 
-The [[file:aria-roles-matrix.html][Aria Roles Matrix]] aims to give an overview of the Aria Roles and
+The [[https://sbsdev.github.io/aria-roles-matrix/][Aria Roles Matrix]] aims to give an overview of the Aria Roles and
 their coverage in [[http://idpf.org/][IDPF]], the [[file:resources/dpc-Checkliste_Barrierefreie_EPUBs.pdf][Checkliste Barrierefreie EPUBs]] by Fabian
 Kern, the [[https://github.com/nlbdev/epub3-guidelines-update/blob/master/guidelines/guidelines.md][Nordic Guidelines for the Production of Accessible EPUB 3]]
 and [[https://www.sbs.ch/][SBS]].
