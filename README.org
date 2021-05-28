@@ -17,8 +17,8 @@ $ pdftotext -layout dpc-Checkliste_Barrierefreie_EPUBs.pdf dpc-Checkliste_Barrie
 
 ** Matrix
 The normative source of the matrix is an [[file:aria-roles-matrix.org][orgmode file]]. This is then
-exported using the standard orgmode export facilities to one
-[[file:aria-roles-matrix.html][big html table]].
+exported using the standard orgmode export facilities to one [[file:docs/index.html][big html
+table]].
 
 * Resources
 - [[https://idpf.github.io/epub-guides/epub-aria-authoring/][EPUB Type to ARIA Role Authoring Guide]]
