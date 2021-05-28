@@ -1,0 +1,1615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-05-28 Fr 12:07 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Christian Egli" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">EPUB Structural Semantics Vocabulary</th>
+<th scope="col" class="org-left">Manifest Properties</th>
+<th scope="col" class="org-left">Digital Publishing WAI-ARIA Module 1.0</th>
+<th scope="col" class="org-left">ARIA 1.1</th>
+<th scope="col" class="org-left">Elements Allowed On</th>
+<th scope="col" class="org-left">Kern</th>
+<th scope="col" class="org-left">SBS</th>
+<th scope="col" class="org-left">Nordic guidelines</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#abstract">abstract [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-abstract">doc-abstract</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#acknowledgments">acknowledgments</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-acknowledgments">doc-acknowledgments</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#afterword">afterword</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-afterword">doc-afterword</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#answer">answer [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#answers">answers [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#appendix">appendix</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-appendix">doc-appendix</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#assessment">assessment</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#assessments">assessments [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#backmatter">backmatter</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#balloon">balloon</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#biblioentry">biblioentry</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-biblioentry">doc-biblioentry</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>li</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#bibliography">bibliography</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-bibliography">doc-bibliography</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#biblioref">biblioref [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-biblioref">doc-biblioref</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>a</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#bodymatter">bodymatter</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#bridgehead">bridgehead</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#case-study">case-study [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#chapter">chapter</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-chapter">doc-chapter</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#colophon">colophon</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-colophon">doc-colophon</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#concluding-sentence">concluding-sentence</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#conclusion">conclusion</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-conclusion">doc-conclusion</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#contributors">contributors</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#copyright-page">copyright-page</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#cover">cover</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>cover</i></td>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/package/meta/#cover-image">cover-image</a></td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-cover">doc-cover</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>img</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#covertitle">covertitle</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#credit">credit [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-credit">doc-credit</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#credits">credits [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-credits">doc-credits</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#dedication">dedication</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-dedication">doc-dedication</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#division">division</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#endnote">endnote</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-endnote">doc-endnote</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>li</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#endnotes">endnotes</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-endnotes">doc-endnotes</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#epigraph">epigraph</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-epigraph">doc-epigraph</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#epilogue">epilogue</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-epilogue">doc-epilogue</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#errata">errata</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-errata">doc-errata</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>No Equivalent</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-example">doc-example</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>aside</code>, <code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#feedback">feedback [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#figure">figure</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/wai-aria-1.1/#figure">figure</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">missing</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#fill-in-the-blank-problem">fill-in-the-blank-problem [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#footnote">footnote</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-footnote">doc-footnote</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>aside</code>, <code>footer</code>, <code>header</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#footnotes">footnotes</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#foreword">foreword</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-foreword">doc-foreword</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#frontmatter">frontmatter</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#fulltitle">fulltitle</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#general-problem">general-problem [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#glossary">glossary</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-glossary">doc-glossary</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#glossterm">glossterm</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/wai-aria-1.1/#term">term</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">missing</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#glossdef">glossdef</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/wai-aria-1.1/#definition">definition</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">missing</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#glossref">glossref [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-glossref">doc-glossref</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>a</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#halftitle">halftitle</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#halftitlepage">halftitlepage</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#imprint">imprint</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#imprimatur">imprimatur</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index">index</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-index">doc-index</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>nav</code>, <code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-headnotes">index-headnotes</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-legend">index-legend</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-group">index-group</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-entry-list">index-entry-list</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-entry">index-entry</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-term">index-term</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-editor-note">index-editor-note</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-locator">index-locator</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-locator-list">index-locator-list</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-locator-range">index-locator-range</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-xref-preferred">index-xref-preferred</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-xref-related">index-xref-related</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-term-category">index-term-category</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#index-term-categories">index-term-categories</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#introduction">introduction</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-introduction">doc-introduction</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#keyword">keyword</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#keywords">keywords [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#label">label [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#landmarks">landmarks</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/wai-aria-1.1/#directory">directory</a></td>
+<td class="org-left"><code>ol</code>, <code>ul</code></td>
+<td class="org-left">missing</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://github.com/nlbdev/epub3-guidelines-update/blob/master/guidelines/guidelines.md#landmarks">navigation</a>(?), see also <a href="https://www.w3.org/TR/wai-aria-1.1/#navigation">wai-aria-1.1</a></td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#learning-objective">learning-objective</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#learning-objectives">learning-objectives [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#learning-outcome">learning-outcome [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#learning-outcomes">learning-outcomes [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#learning-resource">learning-resource</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#learning-resources">learning-resources [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#learning-standard">learning-standard [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#learning-standards">learning-standards [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#list">list</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/wai-aria-1.1/#list">list</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">missing</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#list-item">list-item</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/wai-aria-1.1/#listitem">listitem</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">missing</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#loa">loa</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#loi">loi</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#lot">lot</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#lov">lov</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#match-problem">match-problem [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#multiple-choice-problem">multiple-choice-problem [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#noteref">noteref</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-noteref">doc-noteref</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>a</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#notice">notice</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-notice">doc-notice</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#ordinal">ordinal [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#other-credits">other-credits</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#panel">panel</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#panel-group">panel-group</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#pagebreak">pagebreak</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-pagebreak">doc-pagebreak</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>hr</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#page-list">page-list</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-pagelist">doc-pagelist</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>nav</code>, <code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#part">part</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-part">doc-part</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#practice">practice [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#practices">practices [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#preamble">preamble</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#preface">preface</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-preface">doc-preface</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#prologue">prologue</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-prologue">doc-prologue</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#pullquote">pullquote [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-pullquote">doc-pullquote</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>aside</code>, <code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#question">question [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#qna">qna</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-qna">doc-qna</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#referrer">referrer [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-locator">doc-backlink</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>a</code></td>
+<td class="org-left">missing</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#revision-history">revision-history</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#seriespage">seriespage [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#sound-area">sound-area</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#subchapter">subchapter</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#subtitle">subtitle</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-subtitle">doc-subtitle</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>h1</code>-<code>h6</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#table">table</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/wai-aria-1.1/#table">table</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">missing</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#table-row">table-row</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/wai-aria-1.1/#row">row</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">missing</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#table-cell">table-cell</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/wai-aria-1.1/#cell">cell</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">missing</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#text-area">text-area</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#tip">tip</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-tip">doc-tip</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>aside</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#title">title</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#titlepage">titlepage</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#toc">toc</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.w3.org/TR/dpub-aria-1.0/#doc-toc">doc-toc</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>nav</code>, <code>section</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#toc-brief">toc-brief [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#topic-sentence">topic-sentence</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#true-false-problem">true-false-problem [DRAFT</a>]</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.idpf.org/epub/vocab/structure/#volume">volume</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>No Role</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Christian Egli</p>
+<p class="date">Created: 2021-05-28 Fr 12:07</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
