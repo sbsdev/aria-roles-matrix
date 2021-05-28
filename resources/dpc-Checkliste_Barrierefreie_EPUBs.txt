@@ -1,0 +1,461 @@
+Checkliste Barrierefreie EPUBs
+Version: 1.0
+
+Stand: 14.02.2021
+
+
+
+Diese Checkliste enthält eine Zusammenfassung aller notwendigen Strukturen, Konventionen und
+Logiken für die Erstellung barrierefreier EPUB-Dateien in Bezug auf folgende Bereiche:
+
+    Der EPUB-Container und seine Bestandteile
+    Barrierefreie Gestaltung und Strukturierung von EPUB-Content
+    CSS-Design für barrierefreie eBooks
+    ARIA-Rollen für zentrale eBook-Bestandteile
+    Metadaten für barrierefreie eBooks
+
+
+
+
+digital publishing competence   Kontakt                               Bankverbindung     Ust.-ID
+Fabian Kern                     Tel.: 089 / 791 88 28                 Commerzbank        DE283872763
+Maistrasse 63                   Mail: fabian.kern@dpc-consulting.de   Konto: 404371700   St.-Nr.
+80337 München                   Web: www.dpc-consulting.de            BLZ: 70040048      145/120/31006
+EPUB-Container und seine Bestandteile
+   Container-Definition/Manifest: In content.opf sind alle notwendigen Accessibilty-Metadaten
+    korrekt gesetzt und befüllt (siehe Metadaten).
+   TOC/Navigation Document: NCX-Datei bzw. EPUB Navigation Document bildet die Reihenfolge
+    und hierarchische Gliederung der Dokumente und ihrer Kapitelstruktur komplett ab. Dokumente
+    außerhalb der sequentiellen Lesereihenfolge sind mit @linear=“no“ vom Lesefluss
+    ausgenommen.
+   Landmarks: In content.opf enthält der <guide> die wesentlichen Landmarks der EPUB-Datei. Im
+    EPUB Navigation Document ist eine <nav>-Sektion mit den wesentlichen Landmarks enthalten.
+   Content-Dokumente: In den Content-Dokumenten sind geeignete und semantisch korrekte
+    ARIA-Roles für Dokumente mit besonderer Rolle gesetzt (siehe ARIA-Roles).
+   Verzeichnisse: Semantisch ausgezeichnete Verzeichnisse wie Abbildungsverzeichnis,
+    Tabellenverzeichnis, Literaturverzeichnis, Glossar, Register werden verwendet, wenn möglich
+    und sinnvoll; Auszeichnung über Landmarks und mit ARIA roles innerhalb der Content-
+    Dokumente
+   Seitenzahlen/PageList: Das EPUB enthält Seitenzahlen als Inline-Anker, verknüpft mit einer
+    EPUB-PageList (falls es der Prozess erlaubt: XML first vs. XML last)
+
+
+Barrierefreie Gestaltung und Strukturierung von EPUB-Content
+
+Gliederung und Überschriften
+   Für die Gliederung des Dokumentes werden verschachtelte <section>-Elemente verwendet. Die
+    Gliederungs-Überschriften werden innerhalb der <section>-Elemente mit <h1> - <h6>
+    strukturiert. Jedes Dokument hat mindestens eine Überschrift, jede <section> hat eine
+    Überschrift.
+   Jedes Dokument hat genau eine Hauptüberschrift; diese Überschrift wird auch im <title>-
+    Element im <head> verwendet
+   Die Überschriften-Ebenen werden hierarchisch korrekt verwendet, es gibt keine
+    „übersprungenen“ Überschriften-Ebenen. Überschriften werden aufgrund ihrer Hierarchie
+    gesetzt, nicht aufgrund ihrer Darstellung
+   Die Gliederung des Dokumentes durch Überschriften wird für die Navigation im Produkt
+    möglichst 1:1 auch im TOC bzw. im Inhaltsverzeichnis abgebildet
+   Header-Elemente werden nur für Gliederungs-Überschriften verwendet - nicht für Texte mit
+    überschriftenartigem Charakter, die aber keinen hierarchische Funktion haben
+    (z.B. Zwischenüberschriften, Überschriften von Block/Kasten-Elementen, Abbildungen/Tabellen)
+
+Verwendung von semantischen HTML5-Elementen
+Die Möglichkeiten von HTML5 zur semantischen Strukturierung von Content werden soweit wie
+sinnvoll möglich genutzt. Dies betrifft insbesondere die Verwendung folgender Elemente:
+
+   Inhaltsverzeichnisse und anderen Gruppen von internen Links, die zur Navigation dienen, werden
+    mit dem <nav>-Element strukturiert (ggf. ergänzt durch ein geeignetes @role-Attribut für die
+    ARIA-Rolle)
+   Für Abbildungen, Tabellen und andere eingebundene Objekte wird das <figure>-Element mit
+    einer <figcaption> für Titel/Legende verwendet.
+
+
+© 2021 digital publishing competence                                                                 2
+   Für Multimedia-Einbindung werden mit HTML5-Elemente <audio> bzw. <video> mit korrekter
+    Syntax und Containerstruktur verwendet.
+   Alle Elemente, die nicht Bestandteil des Haupttextes im linearen Lesefluss sind, werden mit dem
+    <aside>-Element strukturiert (ggf. ergänzt durch ein geeignetes @role-Attribut für die ARIA-
+    Rolle). Dies betrifft insbesondere: Fussnoten/Endnoten, Marginalien, Randziffern, Textkästen
+    ohne direkten Bezug zum umgebenden Haupttext.
+   Block-Zitate werden mit dem <blockquote>-Element strukturiert
+
+Listen
+   Für Listen-Strukturierung werden die HTML-Elemente für Listen/Listenpunkte verwendet
+    (keine Tabellen oder verschachtelte <div>-Strukturen).
+   Manuelle Listen (die Tabellen oder verschachtelte <div>-Strukturen notwendig machen) werden
+    soweit inhaltlich möglich vermieden. Wenn dies nicht möglich ist, werden die Listen-Bestandteile
+    mit geeigneten ARIA-Roles ausgezeichnet.
+   Durchgehende Listen werden nicht aus Gründe eines Print-Layouts künstlich unterbrochen
+    (z.B. wegen Seitenumbrüchen oder Abständen)
+   Semantisch korrekte Verwendung von Definition Lists, falls notwendig und sinnvoll
+    (für Begriffe und ihre Definition, z.B. für ein Glossar)
+
+Bilder und Alternativtexte
+   Bilder werden nur für Bildinhalte verwendet (nicht z.B. um Tabellen oder andere Texte
+    einzubinden, die schwierig zu strukturieren sind).
+   Als Klammerung des Bildes mit <figure> als Containerelement für <img> und zugehörige
+    Titel/Legenden (<figcaption>)
+   Für jedes Bild mit einer inhaltlichen Bedeutung wird ein alternativer Beschreibungstext im @alt-
+    Attribut des Bildes integriert
+   Der Beschreibungstext im @alt-Attribut hat inhaltlich deskriptiven Charakter und ist nicht
+    identisch mit Titel/Legende des Bildes (Achtung, doppeltes Vorlesen im Screenreader, falls doch)
+   Für reine Zierelemente (z.B. Icons) ohne inhaltliche Bedeutung wird @role=“presentation“ als
+    ARIA-Rolle verwendet
+   Bilder sind hinreichend kontrastreich, um auch für Leser mit eingeschränkter Sehfähigkeit oder
+    für eReader-Nutzer gut erkennbar zu sein
+   Bilder verwenden Farben, die auch Lesern mit Farbfehlsichtigkeit die Zugänglichkeit der
+    Bildinformation ermöglichen
+
+Tabellen
+   Tabellen werden nur für tabellarischen Content verwendet (nicht zur Simulation von Spalten-
+    Layouts); Abfolge der Spalten/Zellen entspricht der logischen Lesereihenfolge
+   Tabellen werden mit korrektem HTML-Tagging eingebunden, nicht als Bild
+   Strukturell korrekte Auszeichnung von Tabellen-Kopf/Körper/Fuss im HTML-Tagging
+   Klammerung der Tabelle mit <figure> als Containerelement für <table> und zugehörige
+    Titel/Legenden (<figcaption>)
+   Bei Tabellen mit Überspannungen in Kopf/Körper werden die Zuordnungen
+    Kopfzelle(n)/Körperzelle(n) per @scope ausgezeichnet
+   Bei komplexen Tabellen-Inhalten: Alternativtext in @alt-Attribut und/oder Formulierung einer
+    Langbeschreibung
+
+
+© 2021 digital publishing competence                                                                   3
+Inline-Auszeichnungen
+   Korrekte Verwendung von <b>/<i> vs. <em>/<strong>:
+         o <b>/<i> wird für die typografische Auszeichnung verwendet (die deswegen nicht
+              notwendig inhaltliche Betonungen sein müssen)
+         o <em>/<strong> wird für inhaltliche Betonungen verwendet (die deswegen nicht
+              notwendig typografisch dargestellt sein müssen)
+   Interne Links sollten möglichst immer einen aussagekräftigen Text als Elementinhalt besitzen. Ist
+    dies nicht möglich/sinnvoll, dann kann das Ziel durch das @title-Element im Link angegeben
+    werden (z.B.: <a href="#…" title="The EPUB specifications">click here</a>)
+   Externe Links: URLs sollten immer auch als Links getaggt sein.
+   Die in HTML5 verfügbaren semantischen Inline-Elemente werden soweit möglich und sinnvoll zur
+    Auszeichnung genutzt. Dies betrifft insbesondere: <abbr> (für Abkürzungen), <cite> (Angabe von
+    Quelle für ein Zitat, z.B. innerhalb von <blockquote>), <code> (für Inline-Darstellung von
+    Quellcode-Befehlen), <q> (für Inline-Zitate),<time> (für Zeitangaben).
+   Initiale, die mit Klammerung per <span>-Element erzeugt werden, werden vermieden.
+    Alternativen: Verzicht auf Initiale oder Erzeugung per ::first-letter-Selektor (Anm.: Das ist aktuell
+    nicht wirklich eine Option, ich wüsste nicht, dass gängige EPUB-Reader ::first-letter unterstützen)
+   Seitenumbrüche in den Daten als Gegenstück zur PageList werden mit den korrekten
+    @epub:type- und @role-Attributen versehen, um für Assistenzsysteme auswertbar zu sein.
+    (z.B.: <a id=“p27“ title=“Seite 27“ epub:type=“pagebreak“ role=“doc-pagebreak“/>)
+
+Fussnoten/Endnoten
+   Fussnoten (die am Ende eines HTML-Dokumentes gesammelt werden) werden je Fussnoten in
+    ein <aside>-Element mit passender ARIA-Rolle geklammert. Für die bidirektionale Verlinkung
+    werden auf beiden Seiten Link-Elemente mit geeigneten ARIA-Rollen verwendet.
+   Fussnoten, die in eigene Dateien in der Kapitel-Reihenfolge integriert werden, werden im
+    <spine> der EPUB-Datei per @linear=“no“ von der Lesereihenfolge ausgeschlossen.
+   Endnoten (die am Ende der EPUB-Datei gesammelt werden), werden je Fussnote in ein <li>-
+    Element mit passender ARIA-Rolle (role=“doc-endnote“) geklammert. Für die bidirektionale
+    Verlinkung werden auf beiden Seiten Link-Elemente mit geeigneten ARIA-Rollen verwendet.
+   Als Container-Element für die Endnoten wird ein <ol>-Element verwendet. Das klammernder
+    Kapitel ist eine <section role=“doc-endnotes“>
+
+Sprachen und Sprachwechsel
+   Jedes HTML-Dokument wird per @lang-Attribut mit der Dokument-Sprache versehen
+   Längere Blocktexte mit fremdsprachigem Inhalte werden per @lang-Attribut mit ihrer Sprache
+    ausgezeichnet (z.B. Zitate)
+   Optimal: Fremdsprachige Worte werden per @lang-Attribut mit ihrer Sprache ausgezeichnet
+
+
+
+
+© 2021 digital publishing competence                                                                        4
+CSS-Design für barrierefreie eBooks
+   Reflow-Layout: Alle Angaben von Schriftgrößen und Abstände in relativen Maßen wie em oder %
+    (Nutzer kann die Einstellungsmöglichkeiten für Größen verwenden)
+   Schriftgrößen: Keine Schriftgrößen kleiner 1em / 100% verwenden
+    (Nutzungsgewohnheiten im Sinne der Einstellung von Schriftgröße auf optimale Lesbarkeit)
+   Farben und Farbkontraste: Farbkontraste im CSS erfüllen die Anforderungen nach WCAG
+    (Farbschema mit Color Contrast Tool geprüft: https://webaim.org/resources/contrastchecker/)
+   Semantische Farbverwendung: Vermeidung von Farbigkeit als einzigem semantischen
+    Bedeutungsträger für Content (z.B. grün/rot als einzige Unterscheidung von gut/schlecht)
+   Generierter Text per CSS: Bedeutungstragende Texte werden nicht im CSS als generierter Text
+    per content-Property auf :before/:after erzeugt: Solche Texte werden dann nicht Teil des HTML-
+    DOM, das dem Screenreader zur Verfügung steht.
+    (Anmerkung: Nachdem quasi alle eReader-Render-Engines auf Basis von Adobe RMSDK den
+    :before/:after-Selektor nicht unterstützen, sollte man das in EPUB-CSS aus Robustheits-Gründen
+    ohnehin nicht tun)
+   Logische Lese-Reihenfolge: Keine Verwendung von Features wie Grid/Flexbox zum Umsortieren
+    von Content gegenüber dem originalen HTML-DOM
+    (Anmerkung: Das unterstützt aktuell ohnehin kein mir bekannter EPUB-Reader)
+
+
+
+
+© 2021 digital publishing competence                                                                 5
+ARIA-Rollen für zentrale eBook-Bestandteile
+Für die wesentlichen inhaltlich relevanten Dokumente und Dokument-Strukturen in der EPUB-Datei
+stehen folgende ARIA-Rollen zur Verfügung (die z.T. an spezifischen Stellen bzw. zusammen mit
+spezifischem HTML-Tagging verwendet werden müssen):
+
+Rolle                  Verwendung für          Kontext        Details/Tagging                         Prio
+doc-abstract        Abstracts/                 Dokument     <section role=“Rolle“> auf Ebene von      C
+                    Zusammenfassungen          oder Kapitel Dokument oder Kapitel
+                    von Content
+doc-acknowledgments Widmung                    Dokument     <section role=“Rolle“> auf Ebene von      C
+                                               oder Kapitel Dokument oder Kapitel
+doc-afterword          Nachwort                Dokument     <section role=“Rolle“> auf Ebene von      C
+                                               oder Kapitel Dokument oder Kapitel
+doc-appendix           Anhang                  Dokument     <section role=“Rolle“> auf Ebene von      C
+                                               oder Kapitel Dokument oder Kapitel
+doc-backlink           Rücklinks (z.B. von     Link         <a role="doc-backlink"                    A
+                       Fussnote zurück zu                   href="#fnref01"> in <li> oder <aside>
+                       Content)                             für Fussnote
+doc-biblioentry        Literaturverzeichnis-   Struktur-    <li role="doc-biblioentry"> für den       B
+                       Eintrag                 Element      einzelnen Eintrag. Wenn kein Listen-
+                                                            Tagging verwendet wird, MUSS
+                                                            role=“list“ an parent-Element!
+doc-bibliography       Literaturverzeichnis    Dokument     <section role=“Rolle“> auf Ebene von      B
+                                               oder Kapitel Dokument oder Kapitel
+doc-biblioref          Verweis auf             Link         <a role="doc-biblioref"> für den Link     B
+                       Literaturverzeichnis
+doc-chapter            Kapitel/Dokument        Dokument <section role=“Rolle“> auf Ebene von          A
+                                               oder Kapitel Dokument oder Kapitel
+                                                            = Standard-Rolle für jedes Kapitel, das
+                                                            keinen speziellen anderen Typ hat
+doc-colophon           Impressum               Dokument     <section role=“Rolle“> auf Ebene von      C
+                                               oder Kapitel Dokument oder Kapitel
+doc-conclusion         Zusammenfassung (am Dokument         <section role=“Rolle“> auf Ebene von      C
+                       Ende eines Werkes)      oder Kapitel Dokument oder Kapitel
+doc-cover              Cover-Bild              Bild-        <img role="doc-cover"> für das            A
+                                               Element      Coverbild
+doc-credit             Quellenangabe (z.B. für Struktur-    <p role="doc-credit">, z.B. für Legende   C
+                       Bilder/Zitate)          Element
+doc-credits            Quellenangaben als      Dokument     <section role=“Rolle“> auf Ebene von      C
+                       Dokument/Kapitel        oder Kapitel Dokument oder Kapitel
+doc-dedication         Widmung                 Dokument     <section role=“Rolle“>/<p role=“Rolle“>   C
+                                                            auf Ebene von Dokument oder Kapitel
+doc-endnote            Endnote                 Struktur-    <li role="doc-endnote"> für den           A
+                                               Element      einzelnen Eintrag. Wenn kein Listen-
+                                                            Tagging verwendet wird, MUSS
+                                                            role=“list“ an parent-Element!
+doc-endnotes           Endnoten                Dokument <section role=“Rolle“> auf Ebene von          A
+                                               oder Kapitel Dokument oder Kapitel
+doc-epigraph           Motto                   Dokument     <blockquote role="doc-epigraph">          C
+                                               oder Kapitel
+doc-epilogue           Epilog                  Dokument     <section role=“Rolle“> auf Ebene von      C
+                                               oder Kapitel Dokument oder Kapitel
+doc-errata             Errata-Sektion          Dokument     <section role=“Rolle“> auf Ebene von      C
+                                               oder Kapitel Dokument oder Kapitel
+doc-example            Beispiel (Block/Kasten- Struktur-    <aside role="doc-example"> für das        C
+
+
+© 2021 digital publishing competence                                                                         6
+                         Struktur im Content)     Element        Struktur-Element
+doc-footnote             Fussnote                 Struktur-    <aside role="doc-footnote"> für die          C
+                                                  Element      einzelne Fussnote
+doc-foreword             Vorwort                  Dokument     <section role=“Rolle“> auf Ebene von         C
+                                                  oder Kapitel Dokument oder Kapitel
+doc-glossary             Glossar                  Struktur-    <section role=“doc-glossary“> oder <dl       B
+                                                  Element      role=“glossary“>
+doc-glossref             Glossar-Verweis          Link         <a role="doc-glossref"> für den Link auf     B
+                                                               Glossareintrag
+doc-index                Register/                Dokument     <section role=“Rolle“> auf Ebene von         C
+                         Sachverzeichnis          oder Kapitel Dokument oder Kapitel
+doc-introduction         Einleitung               Dokument     <section role=“Rolle“> auf Ebene von         C
+                                                  oder Kapitel Dokument oder Kapitel
+doc-noteref              Verweis auf              Link         <a role="doc-noteref"> für den Link auf      A
+                         Fussnote/Endnote                      Fussnote/Endnote
+doc-notice               Block-Element für        Struktur-    Rolle an <section>, <div> oder <aside>       C
+                         Achtung, Warnung,        Element
+                         Gefahr
+doc-pagebreak            Seitenumbruch-Marke, Struktur-          <span id="ID" role="doc-pagebreak"         B
+                         falls aus Print      Element            title="4"/>
+                         übernommen
+doc-pagelist             Seitenliste          Landmark         <nav role="doc-pagelist"> im EPUB            B
+                                                               Navigation Document
+doc-part                 Teil als Gliederung      Dokument     <section role=“Rolle“> auf Ebene von         C
+                         über dem Kapitel         oder Kapitel Dokument oder Kapitel
+doc-preface              Einleitung               Dokument     <section role=“Rolle“> auf Ebene von         C
+                                                  oder Kapitel Dokument oder Kapitel
+doc-prologue             Prolog                   Dokument     <section role=“Rolle“> auf Ebene von         C
+                                                  oder Kapitel Dokument oder Kapitel
+doc-pullquote            Anreißer                 Struktur-    Rolle an <aside> oder <span>                 C
+                                                  Element
+doc-qna                  „Questions and           Dokument     <section role=“Rolle“> auf Ebene von         C
+                         Answers“, für            oder Kapitel Dokument oder Kapitel
+                         Interview oder FAQ
+doc-subtitle             Untertitel               Überschrift    <p role="doc-subtitle"> unterhalb der      A
+                                                                 zugehörigen Überschrift
+doc-tip                  Tipp (als Blockelement   Struktur-      <aside role="doc-tip"> für das Struktur-   C
+                         im Content)              Element        Element
+doc-toc                  Table of Contents als    Struktur-      <nav role="doc-toc"> in toc.xhtml          A
+                         Teil des Navigation      Element
+                         Dokument
+Priorisierung:
+A:        Wird in quasi jedem EPUB verwendet werden, sollte aus funktionalen Gründen und
+          für a11y-Compliance gesetzt werden
+B:        Kommt oft vor, aber nicht in jedem Titel/jedem Genre; nur sinnvoll, wenn das Produkt das
+          inhaltlich hergibt und die Quell-Datenstruktur entsprechend tief strukturiert ist. Wenn
+          vorhanden, sollte es verwendet werden.
+C:        Optionale Buch-Bestandteile, die es oft nicht gibt; Quell-Datenstruktur muss dafür bereits
+          sehr differenziert gepflegt sein. Ist als optional im Output ansehen.
+Quelle: https://www.w3.org/TR/dpub-aria-1.0/
+
+
+
+
+© 2021 digital publishing competence                                                                            7
+Metadaten für barrierefreie eBooks
+Folgende Metadaten werden für barrierefreie eBooks verwendet:
+
+Property                      Verwendung/Werte                             Anwendung
+schema:accessMode             Auflistung, welche medialen Zugänge im       Verpflichtend
+                              Content verwendet werden.                    Für EPUB würde immer „textual“
+                                                                           und „visual“ integrieren. Denn:
+                              Werte:                                       Mit dem Cover-Bild hat eigentlich
+                              -   textual                                  jedes EPUB mindestens ein Bild
+                                  (Text-Content)                           mit integriert.
+                              -   visual
+                                  (Bilder, Video)                          Weitere Fallunterscheidungen für
+                              -   auditory                                 Audio/Video sind nur sinnvoll für
+                                  (Audio, Video)                           Multimedia-EPUBs.
+schema:accessModeSufficient   Angabe, welche medialen Zugänge              Empfohlen
+                              hinreichend sind, um allen Content im        Für EPUB ohne Multimedia-
+                              EPUB barrierefrei nutzen zu können.          Inhalte:
+
+                              Werte:                                       -   Wert „textual, visual“ wird
+                              -  textual                                       immer integriert
+                              -  textual, visual                           -   Wenn alle Bilder in der
+                              -  textual, auditory                             Publikation entweder ein
+                              - textual, visual, auditory                      befüllte alt-Attribut oder
+                                                                               role=“presentation“ haben,
+                                                                               dann wird zusätzlich der Wert
+                                                                               „textual“ integriert
+                                                                               (= textlicher Zugang ist
+                                                                               ausreichend für alle Inhalte)
+
+                                                                           Weitere Fallunterscheidungen für
+                                                                           Audio/Video sind nur sinnvoll für
+                                                                           Multimedia-EPUBs.
+schema:accessibilitySummary   Menschenlesbare Prosa-                       Verpflichtend
+                              Zusammenfassung der Barrierefreiheits-       Für die Verwendung im Verlags-
+                              Merkmale einer Publikation; wird für die     Kontext ist es wahrscheinlich
+                              Ausgabe in Produkt-Beschreibungen und        sinnvoll, Text-Templates und
+                              Bibliotheks-Funktionen verwendet             Formulierungs-Beispiele bereit zu
+                                                                           stellen.
+                              Werte: Freitext
+schema:accessibilityHazard    Angabe von Content mit                       Verpflichtend
+                              Gefahrenpotenzial für die Nutzergruppe       Hier muss nur für Multimedia-
+                              Epileptiker (Flackern/Biltzlicht, schnelle   EPUBs inhaltlich entschieden
+                              Bewegungen in Video; Lautstärke-             werden.
+                              Wechsel in Audio)
+                                                                           Für alle EPUBs mit Text/Bild-
+                              Werte:                                       Inhalten kann man ohne Prüfung
+                              -    „flashing“/“noFlashingHazard“           herausschreiben:
+                              -    motionSimulation“/
+                                   “noMotionSimulationHazard“              -   noFlashingHazard
+                              -    „sound“/“noSoundHazard“                 -   noMotionSimulationHazard
+                              -    „none“                                  -   noSoundHazard
+schema:accessibilityFeature   Auflistung von speziellen Features für       Verpflichtend
+                              barrierefreie Nutzung des Content.
+                              Werte, die für EPUB relevant sind:           Generell erzeugen:
+                                                                           -  tableOfContents
+                              -    highContrastDisplay:
+                                   CSS-Layout erfüllt die Kontrast-        Prüfung des CSS, dann generell je
+
+© 2021 digital publishing competence                                                                           8
+                                   Anforderungen von WCAG AAA              Verlag erzeugen:
+                              -    displayTransformability:                -   highContrastDisplay
+                                   CSS-Layout verhindert nicht die         -   displayTransformability
+                                   Anwendung von Layout-
+                                   Anpassungen durch den Nutzer            Abstimmung der Konventionen
+                              -    index:                                  mit dem Verlag, dann generell
+                                   Es ist ein mit geeigneten ARIA-         erzeugen:
+                                   Rollen ausgezeichnetes Stichwort-       -   readingOrder
+                                   Verzeichnis enthalten                   -   structuralNavigation
+                              -    printPageNumbers:                           (Hier kann ggf. noch eine
+                                   Es sind Seitenumbruch-                      Prüfung im Content auf
+                                   Informationen im HTML-Content               übersprungene Überschriften-
+                                   enthalten und das Navigation                Ebenen im Konverter
+                                   Document ist mit einer PageList             erfolgen)
+                                   ausgezeichnet
+                              -    alternativeText:                        Abhängig vom Content erzeugen:
+                                   Alle Bilder außer Zierbilder haben      -  alternativText
+                                   sinnvoll ausgefüllte Alternativ-Texte      (Auswertung aller Bilder auf
+                              -    MathML:                                    alt-Attribut bzw.
+                                   Formeln im EPUB sind als MathML            role=“presentation“ im
+                                   enthalten                                  Konverter)
+                              -    longDescription:                        -  index
+                                   Bilder im Content sind haben               (Wenn die Quelldaten es
+                                   Langbeschreibungen wo notwendig            hergeben und ein Konverter
+                              -    readingOrder:                              einen Index erzeugt)
+                                   Logische Lesereihenfolge im             -  printPageNumbers
+                                   Content wird eingehalten; alle             (Nur für XML-last-Produktion
+                                   Sekundärinhalte (Bildcontainer,            und wenn ein Konverter aus
+                                   Fussnoten, Marginalien etc.) sind          den Umbruch-Informationen
+                                   per Markup ausgezeichnet.                  Seiten-Marken und PageList
+                              -    structuralNavigation:                      erzeugt)
+                                   Überschriften im Content
+                                   repräsentieren die Dokument-            Sonderfälle:
+                                   Hierarchie; Content-Struktur wird       -   MathML
+                                   1:1 im TOC abgebildet                       (Nur wenn der Verlag wirklich
+                              -    tableOfContents:                            MathML verwendet)
+                                   Es wird ein TOC erzeugt und             -   longDescription
+                                   eingebunden                                 (Dürfte in der Praxis aus
+                                                                               Kosten/Nutzen-Gründen so
+                              (Die Spec in WCAG enthält noch sehr              gut wie nie vorkommen)
+                              viel mehr Features, die nur für andere
+                              Publikationstypen relevant bzw. im
+                              Medium EPUB nicht sinnvoll anwendbar
+                              sind)
+schema:accessibilityAPI       Kompatibilität mit System-APIs für           Optional
+                              Barrierefreiheits-Funktionen                 Herausschreiben von „ARIA“ als
+                                                                           accessibilityAPI schadet
+                              Werte: z.B.: „ARIA“ für korrekte             wahrscheinlich nichts, wenn es
+                              Verwendung von ARIA-Roles                    sinnvolle ARIA-Roles im EPUB gibt.
+
+                              DAISY Knowledge Base: „The use of this
+                              property in digital publications is
+                              discouraged.“
+schema:accessibilityControl   Angabe, für welche Eingabe-Methoden          Optional
+                              der Content geeignete ist.                   Macht eigentlich nur Sinn im
+                                                                           Kontext von Web-Applikationen.
+                              Werte:                                       Keines der Features innerhalb
+                              -  fullKeyboardControl                       einer EPUB-Datei hat einen
+
+© 2021 digital publishing competence                                                                            9
+                              -    fullMouseControl                       direkten Einfluss auf die
+                              -    fullTouchControl                       Hardware, die zur Nutzung
+                                                                          verwendet werden kann. Kann
+                              DAISY Knowledge Base: „The use of this      man ggf. herausschreiben, bringt
+                              property in digital publications is         aber auch nicht wirklich was.
+                              discouraged.“
+dcterms:conformsTo            Angabe des Accessibility Level, das die     Optional
+                              Publikation erreicht.                       Wäre ggf. für die Zukunft
+                              Werte: URI’s der Accessibility-Level-       interessant, allerdings ist es
+                              Definitionen wie spezifiziert in:           wahrscheinlich mit einiger Mühe
+                              https://www.w3.org/Submission/epub-         verbunden, das genaue
+                              a11y/#sec-conf-reporting                    Accessibilty-Level zu ermitteln
+a11y:certifiedBy              Angabe der Institution, die eine            Optional
+                              Zertifizierung nach dem Standard in         In Deutschland erst sinnvoll, wenn
+                              dcterms:conformsTo vorgenommen hat          es eine Certification Authority für
+                              Werte: Freitext                             Zertifizierung nach EAA gibt
+a11y:certifierCredential      Name des Zertifikats über das               Optional
+                              Accessibility Level, das von der            In Deutschland erst sinnvoll, wenn
+                              Institution in a11y:certifiedBy             es eine Certification Authority für
+                              ausgestellt wurde                           Zertifizierung nach EAA gibt
+a11y:certifierReport          Link zu einem Report über das               Optional
+                              Accessibility Level, der von der            In Deutschland erst sinnvoll, wenn
+                              Institution in a11y:certifiedBy generiert   es eine Certification Authority für
+                              wurde                                       Zertifizierung nach EAA gibt
+                              Wert: URI des Reports
+
+
+Quellen/Referenzen:
+
+https://www.w3.org/Submission/epub-a11y/
+
+https://www.w3.org/wiki/WebSchemas/Accessibility
+
+http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html
+
+https://idpf.github.io/epub-vocabs/package/a11y/
+
+
+
+
+© 2021 digital publishing competence                                                                            10
+
