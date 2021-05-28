@@ -1,0 +1,25 @@
+#+title: Aria Roles Matrix
+#+date: <2021-05-28 Fr>
+#+author: Christian Egli
+
+The [[file:aria-roles-matrix.html][Aria Roles Matrix]] aims to give an overview of the Aria Roles and
+their coverage in [[http://idpf.org/][IDPF]], the [[file:resources/dpc-Checkliste_Barrierefreie_EPUBs.pdf][Checkliste Barrierefreie EPUBs]] by Fabian
+Kern, the [[https://github.com/nlbdev/epub3-guidelines-update/blob/master/guidelines/guidelines.md][Nordic Guidelines for the Production of Accessible EPUB 3]]
+and [[https://www.sbs.ch/][SBS]].
+
+* Build
+
+** Supporting material
+#+begin_src shell
+$ pandoc -f html -t org -o epub-aria-authoring.org https://idpf.github.io/epub-guides/epub-aria-authoring/
+$ pdftotext -layout dpc-Checkliste_Barrierefreie_EPUBs.pdf dpc-Checkliste_Barrierefreie_EPUBs.txt
+#+end_src
+
+** Matrix
+The normative source of the matrix is an [[file:aria-roles-matrix.org][orgmode file]]. This is then
+exported using the standard orgmode export facilities to one
+[[file:aria-roles-matrix.html][big html table]].
+
+* Resources
+- [[https://idpf.github.io/epub-guides/epub-aria-authoring/][EPUB Type to ARIA Role Authoring Guide]]
+- [[file:resources/dpc-Checkliste_Barrierefreie_EPUBs.pdf][Checkliste Barrierefreie EPUBs]]
