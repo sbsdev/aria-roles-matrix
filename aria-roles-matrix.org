@@ -1,3 +1,5 @@
+#+EXPORT_FILE_NAME: docs/index.html
+
 #+ATTR_HTML: :border 2 :rules all :frame border
 | EPUB Structural Semantics Vocabulary | Manifest Properties | Digital Publishing WAI-ARIA Module 1.0 | ARIA 1.1   | Elements Allowed On         | Kern    | SBS | Nordic guidelines                    |
 |--------------------------------------+---------------------+----------------------------------------+------------+-----------------------------+---------+-----+--------------------------------------|
