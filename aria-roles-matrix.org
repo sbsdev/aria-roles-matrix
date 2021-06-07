@@ -51,15 +51,15 @@
 | [[http://www.idpf.org/epub/vocab/structure/#frontmatter][frontmatter]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#fulltitle][fulltitle]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#general-problem][general-problem [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#glossary][glossary]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-glossary][doc-glossary]] | | =section= | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#glossterm][glossterm]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#term][term]] | | missing | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#glossdef][glossdef]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#definition][definition]] | | missing | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#glossref][glossref [DRAFT]]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-glossref][doc-glossref]] | | =a= | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#glossary][glossary]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-glossary][doc-glossary]] | | =section= | | | missing | no | Glossar |
+| [[http://www.idpf.org/epub/vocab/structure/#glossterm][glossterm]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#term][term]] | | missing | | missing | yes | Term |
+| [[http://www.idpf.org/epub/vocab/structure/#glossdef][glossdef]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#definition][definition]] | | missing | | missing | yes | Definition |
+| [[http://www.idpf.org/epub/vocab/structure/#glossref][glossref [DRAFT]]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-glossref][doc-glossref]] | | =a= | | | missing | yes | Glossar-Verweis |
 | [[http://www.idpf.org/epub/vocab/structure/#halftitle][halftitle]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#halftitlepage][halftitlepage]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#imprint][imprint]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#imprimatur][imprimatur]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#index][index]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-index][doc-index]] | | =nav=, =section= | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#index][index]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-index][doc-index]] | | =nav=, =section= | | | missing | no | Register |
 | [[http://www.idpf.org/epub/vocab/structure/#index-headnotes][index-headnotes]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#index-legend][index-legend]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#index-group][index-group]] | | /No Role/ | | | | | | | |
@@ -74,11 +74,11 @@
 | [[http://www.idpf.org/epub/vocab/structure/#index-xref-related][index-xref-related]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#index-term-category][index-term-category]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#index-term-categories][index-term-categories]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#introduction][introduction]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-introduction][doc-introduction]] | | =section= | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#introduction][introduction]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-introduction][doc-introduction]] | | =section= | | | missing | no | Einleitung |
 | [[http://www.idpf.org/epub/vocab/structure/#keyword][keyword]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#keywords][keywords [DRAFT]]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#label][label [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#landmarks][landmarks]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#directory][directory]] | =ol=, =ul= | missing | [[https://github.com/nlbdev/epub3-guidelines-update/blob/master/guidelines/guidelines.md#landmarks][navigation]](?), see also [[https://www.w3.org/TR/wai-aria-1.1/#navigation][wai-aria-1.1]] | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#landmarks][landmarks]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#directory][directory]] | =ol=, =ul= | missing | [[https://github.com/nlbdev/epub3-guidelines-update/blob/master/guidelines/guidelines.md#landmarks][navigation]](?), see also [[https://www.w3.org/TR/wai-aria-1.1/#navigation][wai-aria-1.1]] | | | Landmarks |
 | [[http://www.idpf.org/epub/vocab/structure/#learning-objective][learning-objective]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#learning-objectives][learning-objectives [DRAFT]]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#learning-outcome][learning-outcome [DRAFT]]] | | /No Role/ | | | | | | | |
@@ -87,21 +87,21 @@
 | [[http://www.idpf.org/epub/vocab/structure/#learning-resources][learning-resources [DRAFT]]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#learning-standard][learning-standard [DRAFT]]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#learning-standards][learning-standards [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#list][list]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#list][list]] | | missing | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#list-item][list-item]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#listitem][listitem]] | | missing | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#list][list]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#list][list]] | | missing | | missing | yes | Liste
+| [[http://www.idpf.org/epub/vocab/structure/#list-item][list-item]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#listitem][listitem]] | | missing | | missing | yes | Listeneintrag |
 | [[http://www.idpf.org/epub/vocab/structure/#loa][loa]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#loi][loi]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#lot][lot]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#lov][lov]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#match-problem][match-problem [DRAFT]]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#multiple-choice-problem][multiple-choice-problem [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#noteref][noteref]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-noteref][doc-noteref]] | | =a= | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#notice][notice]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-notice][doc-notice]] | | =section= | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#noteref][noteref]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-noteref][doc-noteref]] | | =a= | | | missing | yes | Verweis auf Fussnote/Endnote |
+| [[http://www.idpf.org/epub/vocab/structure/#notice][notice]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-notice][doc-notice]] | | =section= | | | missing | no | Warnung |
 | [[http://www.idpf.org/epub/vocab/structure/#ordinal][ordinal [DRAFT]]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#other-credits][other-credits]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#panel][panel]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#panel-group][panel-group]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#pagebreak][pagebreak]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-pagebreak][doc-pagebreak]] | | =hr= | | yes | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#pagebreak][pagebreak]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-pagebreak][doc-pagebreak]] | | =hr= | | yes | missing | yes | Seitenumbruch-Marke  + nr. |
 | [[http://www.idpf.org/epub/vocab/structure/#page-list][page-list]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-pagelist][doc-pagelist]] | | =nav=, =section= | | yes | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#part][part]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-part][doc-part]] | | =section= | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#practice][practice [DRAFT]]] | | /No Role/ | | | | | | | |
