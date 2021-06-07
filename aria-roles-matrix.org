@@ -130,3 +130,5 @@
 | [[http://www.idpf.org/epub/vocab/structure/#true-false-problem][true-false-problem [DRAFT]]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#volume][volume]] | | /No Role/ | | | | | | | |
 
+A section without any heading must be referenced using its aria-label value (see: 
+https://github.com/nlbdev/epub3-guidelines-update/blob/master/guidelines/guidelines.md)
