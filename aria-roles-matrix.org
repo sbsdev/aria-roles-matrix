@@ -32,22 +32,22 @@
 | [[http://www.idpf.org/epub/vocab/structure/#cover][cover]] | | /No Role/ | | | | | | | Cover, Cover Vorderseite, Cover Rückseite  |
 | /cover/ | [[http://www.idpf.org/epub/vocab/package/meta/#cover-image][cover-image]] | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-cover][doc-cover]] | | =img= | | yes | missing | yes | Cover-Bild |
 | [[http://www.idpf.org/epub/vocab/structure/#covertitle][covertitle]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#credit][credit [DRAFT]]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-credit][doc-credit]] | | =section= | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#credits][credits [DRAFT]]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-credits][doc-credits]] | | =section= | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#dedication][dedication]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-dedication][doc-dedication]] | | =section= | | yes | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#credit][credit [DRAFT]]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-credit][doc-credit]] | | =section= | | | missing | no | Quellenangabe |
+| [[http://www.idpf.org/epub/vocab/structure/#credits][credits [DRAFT]]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-credits][doc-credits]] | | =section= | | | missing | no | Quellenangaben |
+| [[http://www.idpf.org/epub/vocab/structure/#dedication][dedication]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-dedication][doc-dedication]] | | =section= | | yes | missing | no | Widmung |
 | [[http://www.idpf.org/epub/vocab/structure/#division][division]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#endnote][endnote]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-endnote][doc-endnote]] | | =li= | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#endnotes][endnotes]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-endnotes][doc-endnotes]] | | =section= | | yes | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#epigraph][epigraph]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-epigraph][doc-epigraph]] | | | | yes | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#epilogue][epilogue]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-epilogue][doc-epilogue]] | | =section= | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#errata][errata]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-errata][doc-errata]] | | =section= | | | | | |
-| /No Equivalent/ | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-example][doc-example]] | | =aside=, =section= | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#endnote][endnote]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-endnote][doc-endnote]] | | =li= | | | missing | yes | Endnote |
+| [[http://www.idpf.org/epub/vocab/structure/#endnotes][endnotes]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-endnotes][doc-endnotes]] | | =section= | | yes | missing | yes | Endnoten |
+| [[http://www.idpf.org/epub/vocab/structure/#epigraph][epigraph]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-epigraph][doc-epigraph]] | | | | yes | missing | yes | Motto |
+| [[http://www.idpf.org/epub/vocab/structure/#epilogue][epilogue]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-epilogue][doc-epilogue]] | | =section= | | | missing | no | Epilog |
+| [[http://www.idpf.org/epub/vocab/structure/#errata][errata]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-errata][doc-errata]] | | =section= | | | missing | no | Errata-Sektion |
+| /No Equivalent/ | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-example][doc-example]] | | =aside=, =section= | | | missing | no | Beispiel |
 | [[http://www.idpf.org/epub/vocab/structure/#feedback][feedback [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#figure][figure]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#figure][figure]] | | missing | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#figure][figure]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#figure][figure]] | | missing | | missing | | Abbildung
 | [[http://www.idpf.org/epub/vocab/structure/#fill-in-the-blank-problem][fill-in-the-blank-problem [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#footnote][footnote]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-footnote][doc-footnote]] | | =aside=, =footer=, =header= | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#footnotes][footnotes]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#foreword][foreword]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-foreword][doc-foreword]] | | =section= | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#footnote][footnote]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-footnote][doc-footnote]] | | =aside=, =footer=, =header= | | | missing | yes | Fussnote |
+| [[http://www.idpf.org/epub/vocab/structure/#footnotes][footnotes]] | | /No Role/ | | | | |  | | |
+| [[http://www.idpf.org/epub/vocab/structure/#foreword][foreword]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-foreword][doc-foreword]] | | =section= | | | missing | no | Vorwort |
 | [[http://www.idpf.org/epub/vocab/structure/#frontmatter][frontmatter]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#fulltitle][fulltitle]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#general-problem][general-problem [DRAFT]]] | | /No Role/ | | | | | | | |
