@@ -125,7 +125,7 @@
 | [[http://www.idpf.org/epub/vocab/structure/#tip][tip]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-tip][doc-tip]] | | =aside= | | |  missing | no | Tipp |
 | [[http://www.idpf.org/epub/vocab/structure/#title][title]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#titlepage][titlepage]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#toc][toc]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-toc][doc-toc]] | | =nav=, =section= | | yes | missing | yes | Table of Contents |
+| [[http://www.idpf.org/epub/vocab/structure/#toc][toc]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-toc][doc-toc]] | | =nav=, =section= | | yes | missing | yes | Inhalt |
 | [[http://www.idpf.org/epub/vocab/structure/#toc-brief][toc-brief [DRAFT]]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#topic-sentence][topic-sentence]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#true-false-problem][true-false-problem [DRAFT]]] | | /No Role/ | | | | | | | |
