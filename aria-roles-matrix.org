@@ -30,7 +30,7 @@
 | [[http://www.idpf.org/epub/vocab/structure/#copyright-page][copyright-page]] | | /No Role/ | | | | | | | Copyright-Seite |
 | [[http://www.idpf.org/epub/vocab/structure/#cover][cover]] | | /No Role/ | | | | | | | Cover, Cover Vorderseite, Cover Rückseite  |
 | /cover/ | [[http://www.idpf.org/epub/vocab/package/meta/#cover-image][cover-image]] | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-cover][doc-cover]] | | =img= | | yes | missing | yes | Cover-Bild |
-| [[http://www.idpf.org/epub/vocab/structure/#covertitle][covertitle]] | | /No Role/ | | | | | | | Cover-Überschrift |
+| [[http://www.idpf.org/epub/vocab/structure/#covertitle][covertitle]] | | /No Role/ | | | | | | | Cover-Titel |
 | [[http://www.idpf.org/epub/vocab/structure/#credit][credit [DRAFT]]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-credit][doc-credit]] | | =section= | | | missing | no | Quellenangabe |
 | [[http://www.idpf.org/epub/vocab/structure/#credits][credits [DRAFT]]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-credits][doc-credits]] | | =section= | | | missing | no | Quellenangaben |
 | [[http://www.idpf.org/epub/vocab/structure/#dedication][dedication]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-dedication][doc-dedication]] | | =section= | | yes | missing | no | Widmung |
