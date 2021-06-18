@@ -96,39 +96,39 @@
 | [[http://www.idpf.org/epub/vocab/structure/#multiple-choice-problem][multiple-choice-problem [DRAFT]]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#noteref][noteref]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-noteref][doc-noteref]] | | =a= | | | missing | yes | Verweis auf Fussnote/Endnote |
 | [[http://www.idpf.org/epub/vocab/structure/#notice][notice]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-notice][doc-notice]] | | =section= | | | missing | no | Warnung |
-| [[http://www.idpf.org/epub/vocab/structure/#ordinal][ordinal [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#other-credits][other-credits]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#panel][panel]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#panel-group][panel-group]] | | /No Role/ | | | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#ordinal][ordinal [DRAFT]]] | | /No Role/ | | | | | | | Ordnungszahlen |
+| [[http://www.idpf.org/epub/vocab/structure/#other-credits][other-credits]] | | /No Role/ | | | | | | | Weitere Würdigungen |
+| [[http://www.idpf.org/epub/vocab/structure/#panel][panel]] | | /No Role/ | | | | | | | Tafel |
+| [[http://www.idpf.org/epub/vocab/structure/#panel-group][panel-group]] | | /No Role/ | | | | | | | Gruppe mit Tafeln |
 | [[http://www.idpf.org/epub/vocab/structure/#pagebreak][pagebreak]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-pagebreak][doc-pagebreak]] | | =hr= | | yes | missing | yes | Seitenumbruch-Marke  + nr. |
 | [[http://www.idpf.org/epub/vocab/structure/#page-list][page-list]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-pagelist][doc-pagelist]] | | =nav=, =section= | | yes | missing | yes | Seitenliste |
 | [[http://www.idpf.org/epub/vocab/structure/#part][part]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-part][doc-part]] | | =section= | | | missing | no | Gliederungsteil |
-| [[http://www.idpf.org/epub/vocab/structure/#practice][practice [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#practices][practices [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#preamble][preamble]] | | /No Role/ | | | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#practice][practice [DRAFT]]] | | /No Role/ | | | | | | | Übung |
+| [[http://www.idpf.org/epub/vocab/structure/#practices][practices [DRAFT]]] | | /No Role/ | | | | | | | Übungen |
+| [[http://www.idpf.org/epub/vocab/structure/#preamble][preamble]] | | /No Role/ | | | | | | | Präambel |
 | [[http://www.idpf.org/epub/vocab/structure/#preface][preface]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-preface][doc-preface]] | | =section= | | | missing | no | Vorwort |
 | [[http://www.idpf.org/epub/vocab/structure/#prologue][prologue]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-prologue][doc-prologue]] | | =section= | | | missing | no  | Prolog |
 | [[http://www.idpf.org/epub/vocab/structure/#pullquote][pullquote [DRAFT]]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-pullquote][doc-pullquote]] | | =aside=, =section= | | | missing | no | Pull-Zitat |
-| [[http://www.idpf.org/epub/vocab/structure/#question][question [DRAFT]]] | | /No Role/ | | | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#question][question [DRAFT]]] | | /No Role/ | | | | | | | Frage |
 | [[http://www.idpf.org/epub/vocab/structure/#qna][qna]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-qna][doc-qna]] | | =section= | | | missing | no | Fragen und Antworten |
 | [[http://www.idpf.org/epub/vocab/structure/#referrer][referrer [DRAFT]]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-locator][doc-backlink]] | | =a= | missing | yes | missing | yes | Rücklink |
-| [[http://www.idpf.org/epub/vocab/structure/#revision-history][revision-history]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#seriespage][seriespage [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#sound-area][sound-area]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#subchapter][subchapter]] | | /No Role/ | | | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#revision-history][revision-history]] | | /No Role/ | | | | | | | Überarbeitungen |
+| [[http://www.idpf.org/epub/vocab/structure/#seriespage][seriespage [DRAFT]]] | | /No Role/ | | | | | | | Themenverwandte Publikationen |
+| [[http://www.idpf.org/epub/vocab/structure/#sound-area][sound-area]] | | /No Role/ | | | | | | | Lautmalerei in einem Comic-Einzelbild |
+| [[http://www.idpf.org/epub/vocab/structure/#subchapter][subchapter]] | | /No Role/ | | | | | | | Unterkapitel |
 | [[http://www.idpf.org/epub/vocab/structure/#subtitle][subtitle]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-subtitle][doc-subtitle]] | | =h1=-=h6= | | | missing | no | Untertitel |
 | [[http://www.idpf.org/epub/vocab/structure/#table][table]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#table][table]] | | missing | | missing | yes | Tabelle |
 | [[http://www.idpf.org/epub/vocab/structure/#table-row][table-row]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#row][row]] | | missing | | missing | yes  | Tabellenzeile |
 | [[http://www.idpf.org/epub/vocab/structure/#table-cell][table-cell]] | | | [[http://www.w3.org/TR/wai-aria-1.1/#cell][cell]] | | missing | | missing | yes | Tabellenzelle |
-| [[http://www.idpf.org/epub/vocab/structure/#text-area][text-area]] | | /No Role/ | | | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#text-area][text-area]] | | /No Role/ | | | | | | | Text in einem Comic-Einzelbild |
 | [[http://www.idpf.org/epub/vocab/structure/#tip][tip]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-tip][doc-tip]] | | =aside= | | |  missing | no | Tipp |
-| [[http://www.idpf.org/epub/vocab/structure/#title][title]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#titlepage][titlepage]] | | /No Role/ | | | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#title][title]] | | /No Role/ | | | | | | | Haupttitel (Liste, Tabelle oder Abbildung)  |
+| [[http://www.idpf.org/epub/vocab/structure/#titlepage][titlepage]] | | /No Role/ | | | | | | | Titelseite |
 | [[http://www.idpf.org/epub/vocab/structure/#toc][toc]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-toc][doc-toc]] | | =nav=, =section= | | yes | missing | yes | Inhalt |
-| [[http://www.idpf.org/epub/vocab/structure/#toc-brief][toc-brief [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#topic-sentence][topic-sentence]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#true-false-problem][true-false-problem [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#volume][volume]] | | /No Role/ | | | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#toc-brief][toc-brief [DRAFT]]] | | /No Role/ | | | | | | | Kurzversion des Inhaltsverzeichnisses |
+| [[http://www.idpf.org/epub/vocab/structure/#topic-sentence][topic-sentence]] | | /No Role/ | | | | | | | Kurzzusammenfassung des folgenden Abschnittes |
+| [[http://www.idpf.org/epub/vocab/structure/#true-false-problem][true-false-problem [DRAFT]]] | | /No Role/ | | | | | | | Richtig-/Falsch-Aufgabe |
+| [[http://www.idpf.org/epub/vocab/structure/#volume][volume]] | | /No Role/ | | | | | | | Band |
 
 A section without any heading must be referenced using its aria-label value (see: 
 https://github.com/nlbdev/epub3-guidelines-update/blob/master/guidelines/guidelines.md)
