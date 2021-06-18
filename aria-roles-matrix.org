@@ -9,10 +9,10 @@
 | [[http://www.idpf.org/epub/vocab/structure/#abstract][abstract [DRAFT]]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-abstract][doc-abstract]] | | =section= | | | missing | no | Abstract/Zusammenfassung |
 | [[http://www.idpf.org/epub/vocab/structure/#acknowledgments][acknowledgments]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-acknowledgments][doc-acknowledgments]] | | =section= | | | missing | no | Widmung |
 | [[http://www.idpf.org/epub/vocab/structure/#afterword][afterword]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-afterword][doc-afterword]] | | =section= | | | missing | no | Nachwort |
-| [[http://www.idpf.org/epub/vocab/structure/#answer][answer [DRAFT]]] | | /No Role/ | | | | | | | |
-| [[http://www.idpf.org/epub/vocab/structure/#answers][answers [DRAFT]]] | | /No Role/ | | | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#answer][answer [DRAFT]]] | | /No Role/ | | | | | | | Antwort |
+| [[http://www.idpf.org/epub/vocab/structure/#answers][answers [DRAFT]]] | | /No Role/ | | | | | | | Antworten |
 | [[http://www.idpf.org/epub/vocab/structure/#appendix][appendix]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-appendix][doc-appendix]] | | =section= | | | missing | no  | Anhang |
-| [[http://www.idpf.org/epub/vocab/structure/#assessment][assessment]] | | /No Role/ | | | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#assessment][assessment]] | | /No Role/ | | | | | | | Test |
 | [[http://www.idpf.org/epub/vocab/structure/#assessments][assessments [DRAFT]]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#backmatter][backmatter]] | | /No Role/ | | | | | | | |
 | [[http://www.idpf.org/epub/vocab/structure/#balloon][balloon]] | | /No Role/ | | | | | | | |
