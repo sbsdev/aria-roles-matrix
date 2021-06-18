@@ -1,0 +1,22 @@
+name: Publish org mode files
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Org Knit
+        uses: tecosaur/org-knit-action@v0.3
+        with:
+          export: html
+          files: aria-roles-matrix.org
+          # Use the generated GITHUB_TOKEN for pushing to the remote branch.
+          commit_message: "Publish: !#!"
