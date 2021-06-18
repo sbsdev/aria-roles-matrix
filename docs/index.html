@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-06-07 Mo 08:45 -->
+<!-- 2021-06-18 Fri 12:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Overview of Aria Roles</title>
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: auto;
+    overflow: visible;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
+  pre.src:hover:before { display: inline;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -194,26 +194,50 @@
   /*]]>*/-->
 </style>
 <script type="text/javascript">
-// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
 <!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
 </script>
 </head>
 <body>
@@ -307,7 +331,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Antwort</td>
 </tr>
 
 <tr>
@@ -320,7 +344,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Antworten</td>
 </tr>
 
 <tr>
@@ -346,7 +370,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Test</td>
 </tr>
 
 <tr>
@@ -359,7 +383,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Tests</td>
 </tr>
 
 <tr>
@@ -372,7 +396,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Anhangteile</td>
 </tr>
 
 <tr>
@@ -385,7 +409,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Sprechblase</td>
 </tr>
 
 <tr>
@@ -437,7 +461,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Hauptteil</td>
 </tr>
 
 <tr>
@@ -450,7 +474,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Balkenüberschrift</td>
 </tr>
 
 <tr>
@@ -463,7 +487,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Fallstudie</td>
 </tr>
 
 <tr>
@@ -489,7 +513,7 @@
 <td class="org-left">yes</td>
 <td class="org-left">missing</td>
 <td class="org-left">no</td>
-<td class="org-left">Impressum</td>
+<td class="org-left">Kolophon</td>
 </tr>
 
 <tr>
@@ -502,7 +526,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Kurzzusammenfassung des vorangehenden Abschnittes</td>
 </tr>
 
 <tr>
@@ -528,7 +552,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Mitwirkende</td>
 </tr>
 
 <tr>
@@ -541,7 +565,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Copyright-Seite</td>
 </tr>
 
 <tr>
@@ -580,7 +604,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Cover-Titel</td>
 </tr>
 
 <tr>
@@ -632,7 +656,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Bereich</td>
 </tr>
 
 <tr>
@@ -723,7 +747,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Feedback</td>
 </tr>
 
 <tr>
@@ -749,7 +773,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Lückentext zum Ausfüllen</td>
 </tr>
 
 <tr>
@@ -775,7 +799,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Fussnoten</td>
 </tr>
 
 <tr>
@@ -801,7 +825,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Titelei</td>
 </tr>
 
 <tr>
@@ -814,7 +838,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Vollständiger Buchtitel</td>
 </tr>
 
 <tr>
@@ -827,7 +851,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Problemstellung</td>
 </tr>
 
 <tr>
@@ -892,7 +916,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Schmutztitel</td>
 </tr>
 
 <tr>
@@ -905,7 +929,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Schmutztitelseite</td>
 </tr>
 
 <tr>
@@ -918,7 +942,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Impressum</td>
 </tr>
 
 <tr>
@@ -931,7 +955,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Imprimatur</td>
 </tr>
 
 <tr>
@@ -957,7 +981,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Angaben zum Register</td>
 </tr>
 
 <tr>
@@ -970,7 +994,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Legende zum Register</td>
 </tr>
 
 <tr>
@@ -983,7 +1007,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Registergruppe</td>
 </tr>
 
 <tr>
@@ -996,7 +1020,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Registereinträge</td>
 </tr>
 
 <tr>
@@ -1009,7 +1033,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Registereintrag</td>
 </tr>
 
 <tr>
@@ -1022,7 +1046,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Registerterm</td>
 </tr>
 
 <tr>
@@ -1035,7 +1059,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Registeranmerkung</td>
 </tr>
 
 <tr>
@@ -1048,7 +1072,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Registerverweis (punktuell)</td>
 </tr>
 
 <tr>
@@ -1061,7 +1085,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Registerverweisliste</td>
 </tr>
 
 <tr>
@@ -1074,7 +1098,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Registerverweis (Bereich)</td>
 </tr>
 
 <tr>
@@ -1087,7 +1111,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Querverweis (Vorzug)</td>
 </tr>
 
 <tr>
@@ -1100,7 +1124,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Querverweis (Zugehörigkeit)</td>
 </tr>
 
 <tr>
@@ -1113,7 +1137,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Querverweis (Kategorie)</td>
 </tr>
 
 <tr>
@@ -1126,7 +1150,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Querverweis (Kategorien)</td>
 </tr>
 
 <tr>
@@ -1152,7 +1176,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Stichwort</td>
 </tr>
 
 <tr>
@@ -1165,7 +1189,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Stichwörter</td>
 </tr>
 
 <tr>
@@ -1178,7 +1202,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Beschriftung</td>
 </tr>
 
 <tr>
@@ -1204,7 +1228,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Lernziel</td>
 </tr>
 
 <tr>
@@ -1217,7 +1241,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Lernziele</td>
 </tr>
 
 <tr>
@@ -1230,7 +1254,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Lernergebnis</td>
 </tr>
 
 <tr>
@@ -1243,7 +1267,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Lernergebnisse</td>
 </tr>
 
 <tr>
@@ -1256,7 +1280,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Lernmittel</td>
 </tr>
 
 <tr>
@@ -1269,7 +1293,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Lernmittel</td>
 </tr>
 
 <tr>
@@ -1282,7 +1306,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Lernanforderung</td>
 </tr>
 
 <tr>
@@ -1295,7 +1319,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Lernanforderungen</td>
 </tr>
 
 <tr>
@@ -1334,7 +1358,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Liste mit Audio-Clips</td>
 </tr>
 
 <tr>
@@ -1347,7 +1371,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Liste mit Illustrationen</td>
 </tr>
 
 <tr>
@@ -1360,7 +1384,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Liste mit Tabellen</td>
 </tr>
 
 <tr>
@@ -1373,7 +1397,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Liste mit Video-Clips</td>
 </tr>
 
 <tr>
@@ -1386,7 +1410,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Zuordnungsaufgabe</td>
 </tr>
 
 <tr>
@@ -1399,7 +1423,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Multiple-Choice-Aufgabe</td>
 </tr>
 
 <tr>
@@ -1438,7 +1462,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Ordnungszahlen</td>
 </tr>
 
 <tr>
@@ -1451,7 +1475,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Weitere Würdigungen</td>
 </tr>
 
 <tr>
@@ -1464,7 +1488,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Tafel</td>
 </tr>
 
 <tr>
@@ -1477,7 +1501,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Gruppe mit Tafeln</td>
 </tr>
 
 <tr>
@@ -1529,7 +1553,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Übung</td>
 </tr>
 
 <tr>
@@ -1542,7 +1566,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Übungen</td>
 </tr>
 
 <tr>
@@ -1555,7 +1579,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Präambel</td>
 </tr>
 
 <tr>
@@ -1607,7 +1631,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Frage</td>
 </tr>
 
 <tr>
@@ -1646,7 +1670,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Überarbeitungen</td>
 </tr>
 
 <tr>
@@ -1659,7 +1683,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Themenverwandte Publikationen</td>
 </tr>
 
 <tr>
@@ -1672,7 +1696,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Lautmalerei in einem Comic-Einzelbild</td>
 </tr>
 
 <tr>
@@ -1685,7 +1709,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Unterkapitel</td>
 </tr>
 
 <tr>
@@ -1750,7 +1774,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Text in einem Comic-Einzelbild</td>
 </tr>
 
 <tr>
@@ -1776,7 +1800,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Haupttitel (Liste, Tabelle oder Abbildung)</td>
 </tr>
 
 <tr>
@@ -1789,7 +1813,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Titelseite</td>
 </tr>
 
 <tr>
@@ -1815,7 +1839,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Kurzversion des Inhaltsverzeichnisses</td>
 </tr>
 
 <tr>
@@ -1828,7 +1852,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Kurzzusammenfassung des folgenden Abschnittes</td>
 </tr>
 
 <tr>
@@ -1841,7 +1865,7 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Richtig-/Falsch-Aufgabe</td>
 </tr>
 
 <tr>
@@ -1854,15 +1878,20 @@
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Band</td>
 </tr>
 </tbody>
 </table>
+
+<p>
+A section without any heading must be referenced using its aria-label value (see: 
+<a href="https://github.com/nlbdev/epub3-guidelines-update/blob/master/guidelines/guidelines.md">https://github.com/nlbdev/epub3-guidelines-update/blob/master/guidelines/guidelines.md</a>)
+</p>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Christian Egli</p>
-<p class="date">Created: 2021-06-07 Mo 08:45</p>
-<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2021-06-18 Fri 12:21</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
