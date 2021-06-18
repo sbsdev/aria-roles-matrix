@@ -24,7 +24,7 @@
 | [[http://www.idpf.org/epub/vocab/structure/#case-study][case-study [DRAFT]]] | | /No Role/ | | | | | | | Fallstudie |
 | [[http://www.idpf.org/epub/vocab/structure/#chapter][chapter]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-chapter][doc-chapter]] | | =section= | | yes | missing | yes | Kapitel/Dokument |
 | [[http://www.idpf.org/epub/vocab/structure/#colophon][colophon]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-colophon][doc-colophon]] | | =section= | | yes |  missing | no | Kolophon |
-| [[http://www.idpf.org/epub/vocab/structure/#concluding-sentence][concluding-sentence]] | | /No Role/ | | | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#concluding-sentence][concluding-sentence]] | | /No Role/ | | | | | | | Kurzzusammenfassung des vorangehenden Abschnittes|
 | [[http://www.idpf.org/epub/vocab/structure/#conclusion][conclusion]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-conclusion][doc-conclusion]] | | =section= | | | missing | no | Zusammenfassung |
 | [[http://www.idpf.org/epub/vocab/structure/#contributors][contributors]] | | /No Role/ | | | | | | | Mitwirkende |
 | [[http://www.idpf.org/epub/vocab/structure/#copyright-page][copyright-page]] | | /No Role/ | | | | | | | Copyright-Seite |
