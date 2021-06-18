@@ -93,7 +93,7 @@
 | [[http://www.idpf.org/epub/vocab/structure/#lot][lot]] | | /No Role/ | | | | | | | Liste mit Tabellen |
 | [[http://www.idpf.org/epub/vocab/structure/#lov][lov]] | | /No Role/ | | | | | | | Liste mit Video-Clips |
 | [[http://www.idpf.org/epub/vocab/structure/#match-problem][match-problem [DRAFT]]] | | /No Role/ | | | | | | | Zuordnungsaufgabe |
-| [[http://www.idpf.org/epub/vocab/structure/#multiple-choice-problem][multiple-choice-problem [DRAFT]]] | | /No Role/ | | | | | | | |
+| [[http://www.idpf.org/epub/vocab/structure/#multiple-choice-problem][multiple-choice-problem [DRAFT]]] | | /No Role/ | | | | | | | Multiple-Choice-Aufgabe |
 | [[http://www.idpf.org/epub/vocab/structure/#noteref][noteref]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-noteref][doc-noteref]] | | =a= | | | missing | yes | Verweis auf Fussnote/Endnote |
 | [[http://www.idpf.org/epub/vocab/structure/#notice][notice]] | | [[http://www.w3.org/TR/dpub-aria-1.0/#doc-notice][doc-notice]] | | =section= | | | missing | no | Warnung |
 | [[http://www.idpf.org/epub/vocab/structure/#ordinal][ordinal [DRAFT]]] | | /No Role/ | | | | | | | Ordnungszahlen |
