@@ -23,3 +23,13 @@ table]].
 * Resources
 - [[https://idpf.github.io/epub-guides/epub-aria-authoring/][EPUB Type to ARIA Role Authoring Guide]]
 - [[file:resources/dpc-Checkliste_Barrierefreie_EPUBs.pdf][Checkliste Barrierefreie EPUBs]]
+
+* FAQ
+- Why are some of the terms in the column /EPUB Structural Semantics Vocabulary/ marked as Draft? :: The
+  section /Status of This Document/ of the [[https:/idpf.github.io/epub-vocabs/structure//][EPUB Structural Semantics
+  Vocabulary]] states:
+  #+begin_quote
+  This document contains draft terms from the EDUPUB profile.
+
+  Any use of terms marked [draft] should be considered experimental.
+  #+end_quote
